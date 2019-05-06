@@ -1,0 +1,49 @@
+mysql> source practice1.sql
+Query OK, 1 row affected (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected (0.08 sec)
+
+Query OK, 6 rows affected, 6 warnings (0.01 sec)
+Records: 6  Deleted: 0  Skipped: 0  Warnings: 6
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 0 rows affected (0.11 sec)
+
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Deleted: 0  Skipped: 0  Warnings: 0
+
++------+------------+------+----------+-----------+--------+
+| id   | name       | age  | gender   | companyId | salary |
++------+------------+------+----------+-----------+--------+
+|    1 | 'xiaohong' |   19 | 'female' |         1 |   7000 |
++------+------------+------+----------+-----------+--------+
+1 row in set (0.00 sec)
+
+mysql> source practice2.sql
++-------------+------------+---------------+
+| companyName | name       | MAX(b.salary) |
++-------------+------------+---------------+
+| 'baidu'     | 'xiaoming' |          6000 |
+| 'alibaba'   | 'xiaohong' |          7000 |
+| 'tengxun'   | 'xiaozhi'  |          8000 |
++-------------+------------+---------------+
+3 rows in set (0.00 sec)
+
+mysql> source practice3.sql
++-------------+-----------+
+| companyName | avgSalary |
++-------------+-----------+
+| 'baidu'     | 8000.0000 |
++-------------+-----------+
+1 row in set (0.00 sec)
+
+mysql> source practice4.sql
++------+------------+------+----------+-----------+--------+-------------+-----------+
+| id   | name       | age  | gender   | companyId | salary | companyName | avgsal    |
++------+------------+------+----------+-----------+--------+-------------+-----------+
+|    0 | 'xiaoming' |   20 | 'male'   |         0 |   6000 | 'baidu'     | 5000.0000 |
+|    1 | 'xiaohong' |   19 | 'female' |         1 |   7000 | 'alibaba'   | 6500.0000 |
++------+------------+------+----------+-----------+--------+-------------+-----------+
+2 rows in set (0.00 sec)
